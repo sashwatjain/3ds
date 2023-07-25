@@ -125,6 +125,13 @@ package bankApplication;
 		private long accountBalance;
 		private String accountType;
 		private String ifscCode;
+		private String operation;
+		public String getOperation() {
+			return operation;
+		}
+		public void setOperation(String Operation) {
+			operation = Operation;
+		}
 		public long getAccountNumber() {
 			return accountNumber;
 		}
@@ -163,6 +170,7 @@ package bankApplication;
 			System.out.println("Account Holder      : "+accountHolder);
 			System.out.println("Bank Account IFSC   : "+ifscCode);
 			System.out.println("Account Balance     : "+accountBalance);
+			System.out.println("Account Type        : "+operation);
 			
 		}
 		
@@ -184,6 +192,7 @@ package bankApplication;
 			bankAccObj.setAccountType(bankAppFormRef.getAccountType());
 			bankAccObj.setIfscCode("BOB000000015");
 			bankAccObj.setAccountBalance(3000);
+			bankAccObj.setOperation("Single");
 			
 			return bankAccObj;
 		}
@@ -200,6 +209,7 @@ package bankApplication;
 			bankAccObj.setAccountType(bankAppFormRef1.getAccountType());
 			bankAccObj.setIfscCode("BOB000000015");
 			bankAccObj.setAccountBalance(3000);
+			bankAccObj.setOperation("Joint");
 			
 			return bankAccObj;
 	}
